@@ -11,7 +11,7 @@ object Versions {
     const val hamcrest = "1.3"
     const val hamkrest = "1.8.0.1"
     const val hocon = "1.4.1"
-    const val jacksonMinor = "2.12"
+    const val jacksonMinor = "2.15"
     const val jackson = "$jacksonMinor.2"
     const val jacoco = "0.8.6"
     const val jaxen = "1.2.0"
