@@ -125,7 +125,7 @@ class Loader(
                 }
                 onLoad?.invoke(newConfig, source)
                 val path = absoluteFile.toPath().parent
-                val isMac = "mac" in System.getProperty("os.name").toLowerCase()
+                val isMac = "mac" in System.getProperty("os.name").lowercase()
                 val watcher = FileSystems.getDefault().newWatchService()
                 path.register(
                     watcher,

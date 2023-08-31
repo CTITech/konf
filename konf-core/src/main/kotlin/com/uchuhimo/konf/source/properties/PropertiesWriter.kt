@@ -43,7 +43,7 @@ private class NoCommentProperties : Properties() {
         override fun write(b: Int) {
             if (firstLineSeen) {
                 super.write(b)
-            } else if (b == '\n'.toInt()) {
+            } else if (b == '\n'.code) {
                 firstLineSeen = true
             }
         }

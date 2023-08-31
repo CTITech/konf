@@ -61,9 +61,6 @@ allprojects {
         } else {
             mavenCentral()
         }
-        maven {
-            url=uri("https://kotlin.bintray.com/kotlinx")
-        }
     }
 
     val dependencyUpdates by tasks.existing(DependencyUpdatesTask::class)

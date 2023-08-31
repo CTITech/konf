@@ -136,7 +136,7 @@ data class SizeInBytes(
                             put("", unit) // no unit specified means bytes
                         } else {
                             val first = unit.prefix.substring(0, 1)
-                            val firstUpper = first.toUpperCase()
+                            val firstUpper = first.uppercase()
                             when (unit.radix) {
                                 Radix.KILO -> {
                                     if (unit.power == 1) {

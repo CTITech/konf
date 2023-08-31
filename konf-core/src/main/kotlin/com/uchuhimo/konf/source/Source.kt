@@ -186,7 +186,7 @@ interface Source {
             currentKey = currentKey.toLittleCamelCase()
         }
         if (isEnabled(Feature.LOAD_KEYS_CASE_INSENSITIVELY)) {
-            currentKey = currentKey.toLowerCase()
+            currentKey = currentKey.lowercase()
         }
         return currentKey
     }
@@ -197,7 +197,7 @@ interface Source {
             currentPath = currentPath.map { it.toLittleCamelCase() }
         }
         if (lowercased || isEnabled(Feature.LOAD_KEYS_CASE_INSENSITIVELY)) {
-            currentPath = currentPath.map { it.toLowerCase() }
+            currentPath = currentPath.map { it.lowercase() }
         }
         return currentPath
     }
@@ -463,7 +463,7 @@ private fun TreeNode.lowercased(): TreeNode {
     if (this is ContainerNode) {
         return withMap(
             children.mapKeys { (key, _) ->
-                key.toLowerCase()
+                key.lowercase()
             }.mapValues { (_, child) ->
                 child.lowercased()
             }
@@ -680,8 +680,8 @@ private inline fun <reified T> TreeNode.cast(source: Source): T {
 
 internal fun stringToBoolean(value: String): Boolean {
     return when {
-        value.toLowerCase() == "true" -> true
-        value.toLowerCase() == "false" -> false
+        value.lowercase() == "true" -> true
+        value.lowercase() == "false" -> false
         else -> throw ParseException("$value cannot be parsed to a boolean")
     }
 }

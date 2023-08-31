@@ -335,7 +335,7 @@ object ConfigInJavaSpec : SubjectSpek<Config>({
             on("get with valid name") {
                 it("should return corresponding value") {
                     assertThat(subject(qualify("name")), equalTo("buffer"))
-                    assertThat(subject.getOrNull(qualify("name")), equalTo("buffer"))
+                    assertThat(subject.getOrNull<String>(qualify("name")), equalTo("buffer"))
                     assertTrue { qualify("name") in subject }
                 }
             }
